@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="OpenDatas" EntityType="Model1.OpenData" />
+    <EntitySet Name="OpenDataSources" EntityType="Model1.OpenDataSource" />
+  </EntityContainer>
+  <EntityType Name="OpenData">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventName" Type="String" Nullable="false" MaxLength="300" />
+    <Property Name="DiaryTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DiaryThemeID" Type="Int32" Nullable="true" />
+    <Property Name="DiaryFormatID" Type="String" Nullable="false" />
+    <Property Name="StartDate" Type="String" Nullable="false" />
+    <Property Name="EndTime" Type="String" Nullable="false" />
+    <Property Name="InstancesEndDate" Type="String" Nullable="false" />
+    <Property Name="IsAllDay" Type="String" Nullable="false" />
+    <Property Name="IsRecurring" Type="String" Nullable="false" />
+    <Property Name="Repeats" Type="String" Nullable="false" />
+    <Property Name="RepeatEvery" Type="String" Nullable="false" />
+    <Property Name="RepeatOnDay" Type="String" Nullable="false" />
+    <Property Name="RepeatBy" Type="String" Nullable="false" />
+    <Property Name="RepeatEnds" Type="String" Nullable="false" />
+    <Property Name="ManualInstances" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="OwnerOutletID" Type="String" Nullable="false" />
+    <Property Name="OwnerOutletServiceID" Type="String" Nullable="false" />
+    <Property Name="OwnerCouncilID" Type="String" Nullable="false" />
+    <Property Name="LocationTitle" Type="String" Nullable="false" />
+    <Property Name="LocationAddress" Type="String" Nullable="false" />
+    <Property Name="LocationState" Type="String" Nullable="false" />
+    <Property Name="LocationPostcode" Type="String" Nullable="false" />
+    <Property Name="LocationTimeZone" Type="String" Nullable="false" />
+    <Property Name="LocationOutletID" Type="String" Nullable="false" />
+    <Property Name="LocationOutletServiceID" Type="String" Nullable="false" />
+    <Property Name="LocationCouncilID" Type="String" Nullable="false" />
+    <Property Name="GeocodeLat" Type="String" Nullable="false" />
+    <Property Name="GeocodeLong" Type="String" Nullable="false" />
+    <Property Name="Phone1" Type="String" Nullable="false" />
+    <Property Name="Phone2" Type="String" Nullable="false" />
+    <Property Name="Url" Type="String" Nullable="false" />
+    <Property Name="Email1" Type="String" Nullable="false" />
+    <Property Name="Email2" Type="String" Nullable="false" />
+    <Property Name="ContactFirstname" Type="String" Nullable="false" />
+    <Property Name="ContactSurname" Type="String" Nullable="false" />
+    <Property Name="AgeFrom" Type="String" Nullable="false" />
+    <Property Name="AgeTo" Type="String" Nullable="false" />
+    <Property Name="AllowRegistration" Type="String" Nullable="false" />
+    <Property Name="SendEmailOnRegistration" Type="String" Nullable="false" />
+    <Property Name="AvailableSeats" Type="String" Nullable="false" />
+    <Property Name="SmallImageName" Type="String" Nullable="false" />
+    <Property Name="SmallImageUrl" Type="String" Nullable="false" />
+    <Property Name="LargeImageName" Type="String" Nullable="false" />
+    <Property Name="LargeImageUrl" Type="String" Nullable="false" />
+    <Property Name="NextOccurrence" Type="String" Nullable="false" />
+    <Property Name="AcceptedTerms" Type="String" Nullable="false" />
+    <Property Name="DataProvider" Type="String" Nullable="false" />
+    <Property Name="DataProviderKey" Type="String" Nullable="false" />
+    <Property Name="DataProviderData" Type="String" Nullable="false" />
+    <Property Name="DataProviderUrl" Type="String" Nullable="false" />
+    <Property Name="DataProviderStatsUrl" Type="String" Nullable="false" />
+    <Property Name="IsDeleted" Type="String" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" />
+    <Property Name="CreatedDateTime" Type="String" Nullable="false" />
+    <Property Name="ModifiedBy" Type="String" Nullable="false" />
+    <Property Name="ModifiedDateTime" Type="String" Nullable="false" />
+    <Property Name="SysStrartTime" Type="String" Nullable="false" />
+    <Property Name="SysEndTime" Type="String" Nullable="false" />
+    <Property Name="ViewableBy" Type="String" Nullable="false" />
+    <Property Name="Priority" Type="String" Nullable="false" />
+    <Property Name="LastSeenDateTime" Type="String" Nullable="false" />
+    <Property Name="StartTime" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OpenDataSource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BaseAddress" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ResourceId" Type="Guid" Nullable="false" />
+    <Property Name="RevisionId" Type="Guid" />
+    <Property Name="LastRevision" Type="DateTime" Precision="7" />
+    <Property Name="LastUpdate" Type="DateTime" Precision="7" />
+    <Property Name="ImportScriptPath" Type="String" MaxLength="260" FixedLength="false" Unicode="true" />
+    <Property Name="ImportScript" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Property1" Type="String" Nullable="false" />
+    <Property Name="Property2" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>
